@@ -494,15 +494,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   
   <p>前段时间做了一些ctf的题，发现真的挺难的。。。。哭唧唧</p>
-<p>##相关知识点<br>###有关网站类的技巧<br>比如说在一题web题型中，题目就需要用到get方式或post方式来传递参数来获取flag。<br>1，get方式是指在url上显示，但也正是因为能在url上显示，所以它的安全性并不高。<br>使用方法：例如：<br><img src="./assets/%E5%9B%BE%E7%89%87.png" class="lazyload" data-srcset="./assets/%E5%9B%BE%E7%89%87.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="图片"><br>在这道题中我们可以根据代码很快知道，当what==’flag’的时候，我们就可以得到flag的值。于是我们可以在url上输入/get/？what=flag或者/?what=flag就可以得到我们想要的flag了。<br><img src="./assets/%E5%9B%BE%E7%89%872.png" class="lazyload" data-srcset="./assets/%E5%9B%BE%E7%89%872.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="图片2"><br>最后一行就是我们所需的flag。</p>
+<h2 id="相关知识点"><a href="#相关知识点" class="headerlink" title="相关知识点"></a>相关知识点</h2><h3 id="有关网站类的技巧"><a href="#有关网站类的技巧" class="headerlink" title="有关网站类的技巧"></a>有关网站类的技巧</h3><p>比如说在一题web题型中，题目就需要用到get方式或post方式来传递参数来获取flag。<br>1，get方式是指在url上显示，但也正是因为能在url上显示，所以它的安全性并不高。<br>使用方法：例如：<br><img src="./assets/%E5%9B%BE%E7%89%87.png" class="lazyload" data-srcset="./assets/%E5%9B%BE%E7%89%87.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="图片"><br>在这道题中我们可以根据代码很快知道，当what==’flag’的时候，我们就可以得到flag的值。于是我们可以在url上输入/get/？what=flag或者/?what=flag就可以得到我们想要的flag了。<br><img src="./assets/%E5%9B%BE%E7%89%872.png" class="lazyload" data-srcset="./assets/%E5%9B%BE%E7%89%872.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="图片2"><br>最后一行就是我们所需的flag。</p>
 <p>因此，在使用get/post方法传参时，我们需要根据题目的意思来判断，大致的方法和上述的例题类似。</p>
 <p>我使用的只是get传参的方法之一，还有三种方法：<br>1、用超链接的方法传递参数，大致的操作方法就是在网页上打开一个在线翻译工具，然后将网页链接复制进去，然后就会传递id和name两个参数，之后就会解出flag。<br>虽然我用这个方法没有解出flag呜呜呜，但是我看别人弄过，方法我大致明白一些。。哭唧唧。。。<br>2、通过js方法传递<br>3、通过for表单传递<br>后两种方法还没有学习怎么使用，也不太会，不过之后会再更新学习的内容。</p>
-<p>####web类型2<br>查看源代码之后会给我们一大串的代码，这个时候我们只需在代码中找到关键的flag即可解题，此类型的题一般比较的简单，只需要通过找不同就可以找出flag。</p>
+<h4 id="web类型2"><a href="#web类型2" class="headerlink" title="web类型2"></a>web类型2</h4><p>查看源代码之后会给我们一大串的代码，这个时候我们只需在代码中找到关键的flag即可解题，此类型的题一般比较的简单，只需要通过找不同就可以找出flag。</p>
 <p>还有就是通过修改源代码中的部分代码就可以解出flag，这个就需要积累一定的html知识。</p>
-<p>###有关图片类的<br>题目给出我们一张图片，然后我们需要观察这一张图片和我们平时所看的图片有什么不同之处。如：<br><img src="./assets/file2.png" class="lazyload" data-srcset="./assets/file2.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="file2"><br>首先的思路就是查看这张图片的属性，若是没有发现什么特别的东西就用编辑器打开文件，看看有没有什么特别的，之后可能就会发现有一些特殊的字符，如&#107;&#101;&#121;&#123;&#121;&#111;&#117;&#32;&#97;&#114;&#101;&#32;&#114;&#105;&#103;&#104;&#116;&#125;等<br><img src="./assets/en.png" class="lazyload" data-srcset="./assets/en.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="en"><br>这是一段unicode编码，然后找一个在线unicode编码进行解密就可以得到flag了。<br>于是又学到了一个新的知识：一般看到以&amp;#、&amp;#x、\u等三种表现形式的乱码就是unicode编码，然后进行解码就可以了。</p>
+<h3 id="有关图片类的"><a href="#有关图片类的" class="headerlink" title="有关图片类的"></a>有关图片类的</h3><p>题目给出我们一张图片，然后我们需要观察这一张图片和我们平时所看的图片有什么不同之处。如：<br><img src="./assets/file2.png" class="lazyload" data-srcset="./assets/file2.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="file2"><br>首先的思路就是查看这张图片的属性，若是没有发现什么特别的东西就用编辑器打开文件，看看有没有什么特别的，之后可能就会发现有一些特殊的字符，如&#107;&#101;&#121;&#123;&#121;&#111;&#117;&#32;&#97;&#114;&#101;&#32;&#114;&#105;&#103;&#104;&#116;&#125;等<br><img src="./assets/en.png" class="lazyload" data-srcset="./assets/en.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" alt="en"><br>这是一段unicode编码，然后找一个在线unicode编码进行解密就可以得到flag了。<br>于是又学到了一个新的知识：一般看到以&amp;#、&amp;#x、\u等三种表现形式的乱码就是unicode编码，然后进行解码就可以了。</p>
 <p>总结：总之，在拿到一张图片的时候我们首先要看图片的属性和信息，然后再进行下一步的操作。</p>
-<p>#####大致就是这么些吧，之后还会更新的！！！！这ctf做的过程是身心疲惫，但是做出来之后又是具有极大的成就感，也许这就是痛并快乐着吧。。。</p>
-
+<h5 id="大致就是这么些吧，之后还会更新的！！！！这ctf做的过程是身心疲惫，但是做出来之后又是具有极大的成就感，也许这就是痛并快乐着吧。。。"><a href="#大致就是这么些吧，之后还会更新的！！！！这ctf做的过程是身心疲惫，但是做出来之后又是具有极大的成就感，也许这就是痛并快乐着吧。。。" class="headerlink" title="大致就是这么些吧，之后还会更新的！！！！这ctf做的过程是身心疲惫，但是做出来之后又是具有极大的成就感，也许这就是痛并快乐着吧。。。"></a>大致就是这么些吧，之后还会更新的！！！！这ctf做的过程是身心疲惫，但是做出来之后又是具有极大的成就感，也许这就是痛并快乐着吧。。。</h5>
   
   
     
@@ -536,7 +535,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-06-05T01:30:06+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-06-05T01:40:03+08:00">
   <a class='notlink'>
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
     <p>更新于：Jun 5, 2021</p>
@@ -651,6 +650,20 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
 
 
+
+  <section class="widget toc-wrapper shadow desktop mobile" id="toc-div" >
+    
+  <header>
+    
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86%E7%82%B9"><span class="toc-text">相关知识点</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%89%E5%85%B3%E7%BD%91%E7%AB%99%E7%B1%BB%E7%9A%84%E6%8A%80%E5%B7%A7"><span class="toc-text">有关网站类的技巧</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#web%E7%B1%BB%E5%9E%8B2"><span class="toc-text">web类型2</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%89%E5%85%B3%E5%9B%BE%E7%89%87%E7%B1%BB%E7%9A%84"><span class="toc-text">有关图片类的</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%A4%A7%E8%87%B4%E5%B0%B1%E6%98%AF%E8%BF%99%E4%B9%88%E4%BA%9B%E5%90%A7%EF%BC%8C%E4%B9%8B%E5%90%8E%E8%BF%98%E4%BC%9A%E6%9B%B4%E6%96%B0%E7%9A%84%EF%BC%81%EF%BC%81%EF%BC%81%EF%BC%81%E8%BF%99ctf%E5%81%9A%E7%9A%84%E8%BF%87%E7%A8%8B%E6%98%AF%E8%BA%AB%E5%BF%83%E7%96%B2%E6%83%AB%EF%BC%8C%E4%BD%86%E6%98%AF%E5%81%9A%E5%87%BA%E6%9D%A5%E4%B9%8B%E5%90%8E%E5%8F%88%E6%98%AF%E5%85%B7%E6%9C%89%E6%9E%81%E5%A4%A7%E7%9A%84%E6%88%90%E5%B0%B1%E6%84%9F%EF%BC%8C%E4%B9%9F%E8%AE%B8%E8%BF%99%E5%B0%B1%E6%98%AF%E7%97%9B%E5%B9%B6%E5%BF%AB%E4%B9%90%E7%9D%80%E5%90%A7%E3%80%82%E3%80%82%E3%80%82"><span class="toc-text">大致就是这么些吧，之后还会更新的！！！！这ctf做的过程是身心疲惫，但是做出来之后又是具有极大的成就感，也许这就是痛并快乐着吧。。。</span></a></li></ol></li></ol></li></ol></li></ol>
+    </div>
+  </section>
 
 
   
