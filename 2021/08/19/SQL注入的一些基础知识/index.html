@@ -22,11 +22,9 @@
 
   <!-- 页面元数据 -->
   
-  <title>我的小可爱们 - Hexo</title>
+  <title>SQL注入的一些基础知识 - Hexo</title>
   
 
-  
-    <meta name="description" content="蹬蹬蹬！！！欢迎大佬小可爱们！！！">
   
 
   <!-- feed -->
@@ -355,7 +353,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                 <div id="l_cover">
   
     
-        <div id="full" class='cover-wrapper friends dock' style="display: none;">
+        <div id="full" class='cover-wrapper artical dock' style="display: none;">
           
             <div id='cover-backstretch'></div>
           
@@ -431,8 +429,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                             
 
 <div class='l_main'>
-  <article id="friends" class="md post article article-entry l_friends white-box reveal shadow article-type-friends" itemscope itemprop="blogPost">
-    
+  <article class="article post white-box reveal md shadow article-type-artical" id="artical" itemscope itemprop="blogPost">
+  
 
 
   
@@ -441,7 +439,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       <h1 class="title">
-        我的小可爱们
+        SQL注入的一些基础知识
       </h1>
       <div class='new-meta-box'>
         
@@ -465,7 +463,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             <div class="new-meta-item date">
   <a class='notlink'>
     <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：Jun 5, 2021</p>
+    <p>发布于：Aug 19, 2021</p>
   </a>
 </div>
 
@@ -476,7 +474,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class="new-meta-item browse leancloud">
     <a class='notlink'>
       
-      <div id="lc-pv" data-title="我的小可爱们" data-path="/friends/">
+      <div id="lc-pv" data-title="SQL注入的一些基础知识" data-path="/2021/08/19/SQL%E6%B3%A8%E5%85%A5%E7%9A%84%E4%B8%80%E4%BA%9B%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">
         <i class="fas fa-eye fa-fw" aria-hidden="true"></i>
         <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
         次浏览
@@ -492,107 +490,33 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   </div>
 
 
-    <p>蹬蹬蹬！！！欢迎大佬小可爱们！！！</p>
-    
-      
-        <div class='friends-group'>
-          <br>
-          <h2 class='friend-header'>
-            
-          </h2>
-          
-          
-            <div class='friend-content'>
-              
-                
-              
-                
-              
-            </div>
-          
-        </div>
-      
-    
-    <br><br>
-    <p>一起学习吖嘿嘿~~</p>
-    
+  
+  
+  <p>大家好！我是每天想被富婆包养摸鱼划水的梦唧唧。这里是我的一些学习总结和学习心得。欢迎并且感谢来看我的文章的小可爱们！同时也期待大佬们现身指导、指正。爱你们，mua~~</p>
+<h1 id="有关SQL注入的基础知识"><a href="#有关SQL注入的基础知识" class="headerlink" title="有关SQL注入的基础知识"></a>有关SQL注入的基础知识</h1><h6 id="我们都知道数据库里储存着很多的数据，但是这么多的数据，当我们想要查询其中的一条数据的时候我们应该怎么查询呢？我们不可能一条一条的查询，那无疑是大海捞针。于是，SQL就给了我们很大的方便，让我们能快速的查询相关的数据信息。这么一想，对于SQL的了解和学习就会简单一些，也能更加理解SQL。以下是SQL的定义："><a href="#我们都知道数据库里储存着很多的数据，但是这么多的数据，当我们想要查询其中的一条数据的时候我们应该怎么查询呢？我们不可能一条一条的查询，那无疑是大海捞针。于是，SQL就给了我们很大的方便，让我们能快速的查询相关的数据信息。这么一想，对于SQL的了解和学习就会简单一些，也能更加理解SQL。以下是SQL的定义：" class="headerlink" title="我们都知道数据库里储存着很多的数据，但是这么多的数据，当我们想要查询其中的一条数据的时候我们应该怎么查询呢？我们不可能一条一条的查询，那无疑是大海捞针。于是，SQL就给了我们很大的方便，让我们能快速的查询相关的数据信息。这么一想，对于SQL的了解和学习就会简单一些，也能更加理解SQL。以下是SQL的定义："></a>我们都知道数据库里储存着很多的数据，但是这么多的数据，当我们想要查询其中的一条数据的时候我们应该怎么查询呢？我们不可能一条一条的查询，那无疑是大海捞针。于是，SQL就给了我们很大的方便，让我们能快速的查询相关的数据信息。这么一想，对于SQL的了解和学习就会简单一些，也能更加理解SQL。以下是SQL的定义：</h6><h3 id="SQL的定义"><a href="#SQL的定义" class="headerlink" title="SQL的定义"></a>SQL的定义</h3><p>SQL是一种数据库查询和程序设计语言。用于存取数据以及查询更新和管理关系数据库系数。<br>数据库中包含表，表又是由列组成的，表的数据储存方式是按行储存。</p>
+<h3 id="SQL的范围"><a href="#SQL的范围" class="headerlink" title="SQL的范围"></a>SQL的范围</h3><p>SQL的范围包括数据的输入、查询、删除、更新和插入，数据库模式的创建和修改，以及数据库询问控制。</p>
+<h5 id="SQL分为两部分：数据操作语言（DML）和数据定义语言（DDL）"><a href="#SQL分为两部分：数据操作语言（DML）和数据定义语言（DDL）" class="headerlink" title="SQL分为两部分：数据操作语言（DML）和数据定义语言（DDL）"></a>SQL分为两部分：数据操作语言（DML）和数据定义语言（DDL）</h5><p>我们接下来一条一条看，首先是SQL的DML部分：</p>
+<h5 id="查询和更新指令构成了SQL的DML部分："><a href="#查询和更新指令构成了SQL的DML部分：" class="headerlink" title="查询和更新指令构成了SQL的DML部分："></a>查询和更新指令构成了SQL的DML部分：</h5><p>SELSECT–从数据库中获取数据</p>
 
+  
+  
+  
+  
 
-  <div class='article-meta' id="bottom">
-    <div class='new-meta-box'>
+  
+    <div class="prev-next">
       
-        
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2021-06-05T18:13:17+08:00">
-  <a class='notlink'>
-    <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：Jun 5, 2021</p>
-  </a>
-</div>
-
-        
       
-        
-          
-
-        
-      
-        
-          
-  <div class="new-meta-item share -mob-share-list">
-  <div class="-mob-share-list share-body">
-    
-      
-        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/friends/index.html&title=我的小可爱们 - Hexo&summary=蹬蹬蹬！！！欢迎大佬小可爱们！！！"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
-          
+        <a class='next' href='/2021/06/05/%E6%88%91%E7%9A%84%E6%90%AD%E5%BB%BA%E6%84%9F%E5%8F%97/'>
+          <p class='title'>我的搭建感受<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>我的小心情。。。
+博客搭建的感受+小日记收假小日记我终于初步的把我的博客给搭建好了，非常的艰辛对于我来说呜呜呜。。毕竟在这方面，我的领悟挺差的，还需要努力加油才行呢！！我也想在这个领域里能学到一...</p>
         </a>
-      
-    
-      
-        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/friends/index.html&title=我的小可爱们 - Hexo&summary=蹬蹬蹬！！！欢迎大佬小可爱们！！！"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
-          
-        </a>
-      
-    
-      
-        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
-          
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/friends/index.html&title=我的小可爱们 - Hexo&summary=蹬蹬蹬！！！欢迎大佬小可爱们！！！"
-          
-          >
-          
-            <img src="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" class="lazyload" data-srcset="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=">
-          
-        </a>
-      
-    
-      
-    
-      
-    
-  </div>
-</div>
-
-
-
-        
       
     </div>
-  </div>
+  
+</article>
 
-
-  </article>
 
   
 
@@ -607,6 +531,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 
+
+
+
 </div>
 <aside class='l_side'>
   
@@ -616,11 +543,26 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 
+  <section class="widget toc-wrapper shadow desktop mobile" id="toc-div" >
+    
+  <header>
+    
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#SQL%E7%9A%84%E5%AE%9A%E4%B9%89"><span class="toc-text">SQL的定义</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SQL%E7%9A%84%E8%8C%83%E5%9B%B4"><span class="toc-text">SQL的范围</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#SQL%E5%88%86%E4%B8%BA%E4%B8%A4%E9%83%A8%E5%88%86%EF%BC%9A%E6%95%B0%E6%8D%AE%E6%93%8D%E4%BD%9C%E8%AF%AD%E8%A8%80%EF%BC%88DML%EF%BC%89%E5%92%8C%E6%95%B0%E6%8D%AE%E5%AE%9A%E4%B9%89%E8%AF%AD%E8%A8%80%EF%BC%88DDL%EF%BC%89"><span class="toc-text">SQL分为两部分：数据操作语言（DML）和数据定义语言（DDL）</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%9F%A5%E8%AF%A2%E5%92%8C%E6%9B%B4%E6%96%B0%E6%8C%87%E4%BB%A4%E6%9E%84%E6%88%90%E4%BA%86SQL%E7%9A%84DML%E9%83%A8%E5%88%86%EF%BC%9A"><span class="toc-text">查询和更新指令构成了SQL的DML部分：</span></a></li></ol></li></ol></li></ol>
+    </div>
+  </section>
+
 
   
 
 
 </aside>
+
 
 
                                 
